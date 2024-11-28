@@ -1,5 +1,4 @@
 import { View, Text, Image } from 'react-native';
-
 import { getStyles } from './styles'
 import { useTheme } from '~/contexts/ThemeContext';
 

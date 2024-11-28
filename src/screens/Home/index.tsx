@@ -2,10 +2,8 @@ import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { StackNavigationProp } from '@react-navigation/stack';
-
 import { useTheme } from '~/contexts/ThemeContext';
 import { getStyles } from './styles';
-
 import { RootStackParamList } from '../../types/navigation';
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
@@ -16,8 +14,7 @@ type Props = {
 
 
 export default function Home({ navigation }: Props) {
-  const { theme, toggleTheme } = useTheme()
-
+  const { theme } = useTheme()
   const styles = getStyles(theme)
 
   return (
@@ -25,9 +22,10 @@ export default function Home({ navigation }: Props) {
       <View>
         <TouchableOpacity
           style={styles.iconTouchable}
-          onPress={toggleTheme}
+          onPress={() => navigation.navigate('Configurations')}
         >
-          <Feather name={theme === 'light' ? 'sun' : 'moon'}
+          <Feather
+            name='settings'
             size={40}
             color={theme === 'light' ? '#fff' : '#000'} />
         </TouchableOpacity>

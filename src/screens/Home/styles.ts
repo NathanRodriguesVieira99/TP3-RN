@@ -23,24 +23,29 @@ export const getStyles = (theme: 'light' | 'dark') => StyleSheet.create({
   resumoText: {
     fontSize: 22,
     padding: 5,
+    fontFamily: 'Montserrat_500Medium',
     textAlign: 'center',
     color: theme === 'light' ? '#fff' : '#000'
   },
   htmlText: {
     color: '#f26629',
     fontWeight: 'bold',
+    fontFamily: 'Montserrat_700Bold',
   },
   cssText: {
     color: '#1673b5',
     fontWeight: 'bold',
+    fontFamily: 'Montserrat_700Bold',
   },
   scssText: {
     color: '#cc6699',
     fontWeight: 'bold',
+    fontFamily: 'Montserrat_700Bold',
   },
   jsText: {
     color: '#f0da4f',
     fontWeight: 'bold',
+    fontFamily: 'Montserrat_700Bold',
   },
   tsText: {
     color: '#007acc',
@@ -49,6 +54,7 @@ export const getStyles = (theme: 'light' | 'dark') => StyleSheet.create({
   reactText: {
     color: '#61d9fa',
     fontWeight: 'bold',
+    fontFamily: 'Montserrat_700Bold',
   },
   btnProfileContainer: {
     justifyContent: 'center',
@@ -57,14 +63,15 @@ export const getStyles = (theme: 'light' | 'dark') => StyleSheet.create({
   btnProfile: {
     marginTop: 20,
     padding: 10,
-    backgroundColor:   theme === 'light' ? '#369eff' : '#379eff',
+    backgroundColor: theme === 'light' ? '#369eff' : '#379eff',
     borderRadius: 5,
     alignItems: 'center',
     width: 200
   },
   btnProfileText: {
-    color:  theme === 'light' ? '#fff' : '#000',
+    color: theme === 'light' ? '#fff' : '#000',
     fontWeight: 'bold',
     fontSize: 16,
+    fontFamily:'Montserrat_500Medium'
   },
 });

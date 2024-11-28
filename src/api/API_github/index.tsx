@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { Text, View, StyleSheet } from "react-native";
-
-import { Loading } from '../../components/Loading'
-
-import Projects from "~/screens/Projects";
-
-import { GitHubProjectsProps } from "~/types/github";
 import { useTheme } from "~/contexts/ThemeContext";
+import { Loading } from '../../components/Loading'
+import Projects from "~/screens/Projects";
+import { GitHubProjectsProps } from "~/types/github";
 
 const GitHubProjects = () => {
   const [projects, setProjects] = useState<GitHubProjectsProps[]>([])
@@ -63,7 +60,7 @@ const getStyles = (theme: 'light' | 'dark') => StyleSheet.create({
   },
   title: {
     marginTop: 15,
-    fontSize: 20,
+    fontSize: 31,
     fontWeight: 'bold',
     marginBottom: 16,
     color: theme === 'light' ? '#fff' : '#000',

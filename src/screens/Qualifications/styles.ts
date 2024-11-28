@@ -6,15 +6,15 @@ export const getStyles = (theme: 'light' | 'dark') => StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: theme === 'light' ? '#000000' : '#ffffff',
-
   },
   title: {
-    fontSize: 24,
+    fontSize: 31,
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: 30,
     marginBottom: 20,
-    color: theme === 'light' ? '#fff' : '#000'
+    color: theme === 'light' ? '#fff' : '#000',
+    
   },
   section: {
     marginBottom: 20,
@@ -34,7 +34,7 @@ export const getStyles = (theme: 'light' | 'dark') => StyleSheet.create({
   itemText: {
     fontSize: 16,
     marginTop: 5,
-    color:  theme === 'light' ? '#000' : '#fff',
+    color: theme === 'light' ? '#000' : '#fff',
     fontWeight: 'bold'
   },
   certificationText: {

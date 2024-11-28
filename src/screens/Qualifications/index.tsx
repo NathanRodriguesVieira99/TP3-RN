@@ -2,9 +2,12 @@ import { FlatList, Text, View } from "react-native";
 
 import { getStyles } from "./styles";
 import { useTheme } from "~/contexts/ThemeContext";
+import { SkillProps } from "../../types/skills";
+import { CertificationProps } from "~/types/certifications";
+
 
 export default function Qualifications() {
-  const skills = [
+  const skills: SkillProps[] = [
     { name: 'HTML', color: '#e6532e' },
     { name: 'CSS', color: '#2e53e6' },
     { name: 'SCSS', color: '#cf639b' },
@@ -17,10 +20,10 @@ export default function Qualifications() {
     { name: 'Git', color: '#f0553a' },
   ];
 
-  const certifications = [
-    'TypeScript Developer - DIO',
-    'ReactJs Developer - DIO',
-    'JavaScript Developer - DIO',
+  const certifications: CertificationProps[] = [
+    { title: 'TypeScript Developer - DIO' },
+    { title: 'ReactJs Developer - DIO' },
+    { title: 'JavaScript Developer - DIO' },
   ];
 
   const { theme } = useTheme()
@@ -38,7 +41,6 @@ export default function Qualifications() {
           numColumns={3}
           renderItem={({ item }) => (
             <View style={styles.skillItem}>
-
               <Text style={[styles.itemText, { color: item.color }]}>{item.name}</Text>
             </View>
           )}
@@ -51,7 +53,7 @@ export default function Qualifications() {
           data={certifications}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
-            <Text style={styles.certificationText}>{item}</Text>
+            <Text style={styles.certificationText}>{item.title}</Text>
           )}
         />
       </View>
