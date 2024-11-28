@@ -3,8 +3,6 @@ import { View, TouchableOpacity, Text } from 'react-native';
 import { useTheme } from '~/contexts/ThemeContext';
 import { getStyles } from './styles'
 
-
-
 export default function Configurations() {
   const { theme, toggleTheme } = useTheme()
   const styles = getStyles(theme)

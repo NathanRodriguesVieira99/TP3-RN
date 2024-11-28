@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-
 import { useTheme } from '~/contexts/ThemeContext';
 import { getStyles } from './styles';
+
 
 type RootStackParamList = {
   DetalhesCandidatura: {
