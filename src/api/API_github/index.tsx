@@ -19,17 +19,17 @@ const GitHubProjects = () => {
 
       const data: GitHubProjectsProps[] = await response.json()
       setProjects(data)
+
     } catch (error) {
       console.error('Erro ao buscar projetos', error);
     } finally {
       setLoading(false)
     }
-
   }
 
   useEffect(() => {
     fetchProjects()
-  }, [])
+  },[])
 
   if (loading) {
     return (

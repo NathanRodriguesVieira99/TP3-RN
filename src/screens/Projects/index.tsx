@@ -3,11 +3,9 @@ import { getStyles } from './styles';
 import { useTheme } from '~/contexts/ThemeContext';
 import { GitHubProjectsProps } from '~/types/github';
 
-
 interface ProjectsProps {
   projects: GitHubProjectsProps[]
 }
-
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const { theme } = useTheme();
@@ -23,9 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           <View style={styles.projectCard}>
             <Text style={styles.projectName}>{item.name}</Text>
             <Text style={styles.projectDesc}>{item.description || 'Sem descrição'}</Text>
-            <Text
-              style={[styles.projectLink, { textDecorationLine: 'underline', color: 'blue' }]}
-            >
+            <Text style={[styles.projectLink, { textDecorationLine: 'underline', color: 'blue' }]}>
               {item.html_url}
             </Text>
           </View>

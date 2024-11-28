@@ -19,9 +19,10 @@ const candidaturas: Candidatura[] = [
 
 export default function Candidaturas() {
   const navigation = useNavigation<any>();
-
+  
   const { theme } = useTheme();
   const styles = getStyles(theme);
+
 
   const renderItem = ({ item }: { item: Candidatura }) => (
     <TouchableOpacity

@@ -8,11 +8,11 @@ import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Configurations from '~/screens/configurations';
 import ProjetosGitHub from '../api/API_github';
-import Articles from '../screens/Articles';
 import Candidaturas from '../screens/Candituras';
 import DetalhesCandidatura from '../screens/Candituras/DetalhesCandidatura';
 import Qualifications from '../screens/Qualifications';
 import { Feather } from '@expo/vector-icons';
+import Articles from '~/screens/Articles';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
